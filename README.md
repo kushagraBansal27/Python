@@ -1,1 +1,2 @@
-# pyton
+# python
+coding ninjas assignment solution
