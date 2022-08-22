@@ -1,0 +1,18 @@
+def merge(arr1, n, arr2, m) : 
+    #Your code goes here
+    i,j = 0,0
+    new_array = []
+    while (i<n and j<m):
+        if arr1[i] < arr2[j]:
+            new_array.append(arr1[i])
+            i += 1
+        else:
+            new_array.append(arr2[j])
+            j += 1
+    while (i<n):
+        new_array.append(arr1[i])
+        i+=1
+    while (j<m):
+        new_array.append(arr2[j])
+        j+=1
+    return new_array
