@@ -1,0 +1,11 @@
+def secondLargestElement(arr, n):
+    #Your code goes here
+    L = -2147483648 
+    S = -2147483648
+    for i in range(n):
+        if arr[i] > L:
+            S = L
+            L = arr[i]
+        elif arr[i] > S and arr[i]!=L:
+            S = arr[i]
+    return S
