@@ -1,0 +1,19 @@
+
+def BinarySearch(li,n,x):
+    l = 0
+    r = n-1
+    mid = 0
+    while (l<=r):
+        mid = (l+r)//2
+        if (li[mid] == x):
+            return mid+1
+        elif li[mid] < x:
+            l = mid+1
+        else:
+            r = mid-1
+    return -1
+
+x = int(input())
+n = len(li)
+y = BinarySearch (li,n,x)
+print(y)
