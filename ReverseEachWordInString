@@ -1,0 +1,14 @@
+def swap(arr):
+    n = len(arr)
+    res = ""
+    res = res + arr[::-1]
+    return res
+
+def reverseEachWord(string) :
+	# Your code goes here
+    res = string.split(" ")
+    li = []
+    for i in range(len(res)):
+        li.append(swap(res[i]))
+    string1 = " ".join([str(ele) for ele in li]) 
+    return string1
