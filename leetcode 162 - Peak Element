@@ -1,0 +1,21 @@
+class Solution(object):
+    def findPeakElement(self, li):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        n = len(li)
+#         for i in range(n):
+#             if (i == 0 or li[i] > li[i-1]) and (i==n-1 or li[i+1] < li[i]):
+#                 return i
+        l = 0
+        r = n-1
+        while(l<=r):
+            mid = (l + r)//2
+            if (mid==0 or li[mid] > li[mid-1]) and (mid == n-1 or li[mid] > li[mid+1]):
+                return mid
+            elif (mid>0 and li[mid-1] > li[mid]):
+                r = mid-1
+            elif (mid<n-1 and li[mid+1] > li[mid]):
+                l = mid+1
+        
