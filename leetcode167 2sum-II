@@ -1,0 +1,25 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        n = len(nums)
+        l = 0
+        r = n-1
+        ans = [0]*2
+        while l<r :
+            sum = nums[l]+nums[r]
+            if sum == target:
+                ans[0] = l+1
+                ans[1] = r+1
+                return ans
+            elif sum > target:
+                r-=1
+            else:
+                l+=1
+        
+                
+            
+        
