@@ -1,0 +1,17 @@
+def searchtarget(arr,n,target):
+    l,h =0, n-1
+    while l<len(mat) and h>=0:
+        if mat[l][h]==target:
+            return [l,h]
+        elif mat[l][h]<target:
+            l+=1
+        else:
+            h-=1
+    return [-1,-1]
+    
+inp = input().split()
+n,m = int(inp[0]),int(inp[1])
+mat = [[int(j) for j in input().split()[:m]]for i in range(n)]
+x = len(mat[0])
+target = int(input())
+print(searchtarget(mat,x,target))
