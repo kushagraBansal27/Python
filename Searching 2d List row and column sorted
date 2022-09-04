@@ -1,5 +1,5 @@
-def searchtarget(arr,n,target):
-    l,h =0, n-1
+def searchtarget(mat,target):
+    l,h =0, len(mat[0])-1
     while l<len(mat) and h>=0:
         if mat[l][h]==target:
             return [l,h]
@@ -12,6 +12,8 @@ def searchtarget(arr,n,target):
 inp = input().split()
 n,m = int(inp[0]),int(inp[1])
 mat = [[int(j) for j in input().split()[:m]]for i in range(n)]
-x = len(mat[0])
+#flatten_list = [j for sub in mat for j in sub]
+# print(flatten_list)
+# x = len(mat[0])
 target = int(input())
-print(searchtarget(mat,x,target))
+print(searchtarget(mat,target))
