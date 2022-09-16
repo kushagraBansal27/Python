@@ -1,0 +1,14 @@
+def lastidx(arr,si,x):
+    l = len(arr)
+    if si==0:
+        return -1
+    last = lastidx(arr,si-1,x)
+    if arr[si]==x:
+        return si
+    else:
+        return last
+    
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+x = int(input())
+print(lastidx(arr,n-1,x))
