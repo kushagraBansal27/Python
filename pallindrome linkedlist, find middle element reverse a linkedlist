@@ -32,7 +32,7 @@ def isPalindrome(head) :
     mid = middle(head)
     last = reverse(mid.next)
     curr = head
-    while last is not None:
+    while last is not None and curr is not None:
         if curr.data != last.data:
             return False
         curr = curr.next
