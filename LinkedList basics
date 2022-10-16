@@ -25,5 +25,16 @@ def printll(head):
         print(head.data,end=" ")
         head = head.next
         
+def reverse(head):
+    if head is None or head.next is None:
+        return head
+    smallHead = reverse(head.next)
+    tail = head.next
+    tail.next = head
+    head.next = None
+    return smallHead
+    
 head = takeinput() 
 print(printll(head))
+nhead = reverse(head)
+print(printll(nhead))
