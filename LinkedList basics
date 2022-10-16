@@ -1,0 +1,29 @@
+class Node:
+    def __init__(self,data):
+        self.data = data 
+        self.next = None
+        
+def takeinput():
+    head = None
+    tail = None
+    data = [int(ele) for ele in input().split()]
+    i = 0
+    while i<len(data) and data[i] != -1:
+        currdata = data[i]
+        newNode = Node(currdata)
+        if head is None:
+            head = newNode
+            tail = newNode
+        else:
+            tail.next = newNode
+            tail = newNode
+        i+=1
+    return head 
+    
+def printll(head):
+    while head is not None:
+        print(head.data,end=" ")
+        head = head.next
+        
+head = takeinput() 
+print(printll(head))
